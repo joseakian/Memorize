@@ -7,29 +7,33 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MemorizeView: View {
     var body: some View {
         HStack {
-            i
-            i
-            i
-            i
-            
+            memorizeCards()
+            memorizeCards()
+            memorizeCards()
+            memorizeCards()
         }
-        .padding()
+        .padding(20)
     }
 }
 
-var i: some View {
-    ZStack {
-        RoundedRectangle(cornerRadius: 20)
-            .fill(Color.purple)
-            .strokeBorder(Color.black)
-        Text("👻")
-            .font(.largeTitle)
+struct memorizeCards: View {
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 25)
+                .fill(Color.white)
+                .shadow(radius: 10)
+            
+            VStack(alignment: .leading) {
+                Text("❤️")
+            }
+            .padding()
+                
+        }
     }
 }
-
 
 
 
@@ -58,5 +62,5 @@ var i: some View {
 
 
 #Preview {
-    ContentView()
+    MemorizeView()
 }
