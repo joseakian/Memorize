@@ -9,15 +9,53 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        HStack {
+            i
+            i
+            i
+            i
+            
         }
         .padding()
     }
 }
+
+var i: some View {
+    ZStack {
+        RoundedRectangle(cornerRadius: 20)
+            .fill(Color.purple)
+            .strokeBorder(Color.black)
+        Text("👻")
+            .font(.largeTitle)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #Preview {
     ContentView()
