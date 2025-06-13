@@ -10,7 +10,7 @@ import SwiftUI
 struct MemorizeView: View {
     var body: some View {
         HStack {
-            memorizeCards()
+            memorizeCards(isFaceUp: false)
             memorizeCards()
             memorizeCards()
             memorizeCards()
@@ -20,16 +20,23 @@ struct MemorizeView: View {
 }
 
 struct memorizeCards: View {
+    var isFaceUp: Bool = true
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 25)
-                .fill(Color.white)
-                .shadow(radius: 10)
-            
-            VStack(alignment: .leading) {
-                Text("❤️")
+            if isFaceUp {
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color.white)
+                    .shadow(radius: 10)
+                
+                VStack(alignment: .leading) {
+                    Text("❤️")
             }
-            .padding()
+            }
+            else {
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color.gray)
+                    .shadow(radius: 10)
+            }
                 
         }
     }
